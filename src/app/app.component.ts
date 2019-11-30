@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'gestionStockProduit';
+showHide:boolean=false;
+
+ onShowSidebarChange(show){
+    this.showHide=show;
+    console.log("showHide is : " + this.showHide);
+ }
 }
