@@ -10,6 +10,5 @@ showHide:boolean=false;
 
  onShowSidebarChange(show){
     this.showHide=show;
-    console.log("showHide is : " + this.showHide);
  }
 }
