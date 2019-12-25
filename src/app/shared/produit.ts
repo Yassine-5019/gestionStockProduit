@@ -3,4 +3,7 @@ export class Produit{
                      public quantite?: number,
                      public prixUnitaire?: number){
                      }
+         /*get ref(): string {
+                     return this._ref;
+    }*/
 }
