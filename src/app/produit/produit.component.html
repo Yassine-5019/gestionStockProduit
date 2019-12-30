@@ -61,7 +61,7 @@
             <p>
               Voulez-vous vraiment supprimer cette reference ?
             </p>
-            <button class="btn btn-success" (click)="onDelete()">Confirmer</button>
+            <button class="btn btn-success" [disabled]="!selectedProduit.ref" (click)="onDelete()">Confirmer</button>
           </div>
         </div>
         <div class="card-header bg-info text-green">

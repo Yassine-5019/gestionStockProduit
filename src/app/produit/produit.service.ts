@@ -18,9 +18,8 @@ export class ProduitsService{
    return this.http.post(API_URLS.PRODUITS_URL, p);
  }
 
- onDelete(ref:string) : Observable<any>{
-   console.log('refffffffff :' + ref);
-   return this.http.delete(API_URLS.PRODUITS_URL + '/${ref}');
+ onDelete(id:number) : Observable<any>{
+   return this.http.delete(API_URLS.PRODUITS_URL + id);
  }
 
  updateProduit(p:Produit) : Observable<any>{

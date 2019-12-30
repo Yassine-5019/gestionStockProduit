@@ -58,14 +58,15 @@ export class ProduitComponent implements OnInit{
   updateProduit(){
     this.pdtService.updateProduit(this.selectedProduit).subscribe(
       res=>{
-        this.selectedProduit=new Produit();
+        //this.selectedProduit=new Produit();
+        this.initialiserProduit();
         this.loadProduits();
       }
     )
   }
 
   onDelete(){
-    this.pdtService.onDelete(this.selectedProduit.ref).subscribe(
+    this.pdtService.onDelete(this.selectedProduit.id).subscribe(
       res=>{
         this.selectedProduit=new Produit();
         this.loadProduits();
