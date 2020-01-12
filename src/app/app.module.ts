@@ -10,7 +10,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { DashbordComponent } from './dashbord/dashbord.component';
     NavbarComponent,
     SidebarComponent,
     ContentComponent,
-    DashbordComponent
+    DashbordComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [produitService],
+  providers: [produitService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
