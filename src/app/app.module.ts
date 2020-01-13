@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +12,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
+<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AppService } from './app.service';
+=======
+import {ProduitsService} from './produit/produit.service';
+
+>>>>>>> crud_produit
 
 @NgModule({
   declarations: [
@@ -27,9 +34,15 @@ import { AppService } from './app.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
+<<<<<<< HEAD
   providers: [produitService, AppService],
+=======
+  providers: [produitService, ProduitsService],
+>>>>>>> crud_produit
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,7 @@ import {Injectable} from '@angular/core'
 @Injectable()
 export class produitService{
 
-  private produits : Produit[]=[];
+/*  private produits : Produit[]=[];
   public constructor(){
     let p1:Produit=new Produit('Livre', 300, 12);
     let p2:Produit=new Produit('Stylo', 500, 1.5);
@@ -15,5 +15,5 @@ export class produitService{
   }
   public  getProduits() : Produit[]{
      return this.produits;
-  }
+  }*/
 }
