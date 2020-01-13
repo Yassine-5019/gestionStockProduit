@@ -12,14 +12,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
-<<<<<<< HEAD
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AppService } from './app.service';
-=======
 import {ProduitsService} from './produit/produit.service';
-
->>>>>>> crud_produit
 
 @NgModule({
   declarations: [
@@ -38,11 +34,7 @@ import {ProduitsService} from './produit/produit.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-<<<<<<< HEAD
-  providers: [produitService, AppService],
-=======
-  providers: [produitService, ProduitsService],
->>>>>>> crud_produit
+  providers: [produitService, ProduitsService, AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
