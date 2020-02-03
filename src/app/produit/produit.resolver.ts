@@ -9,6 +9,8 @@ export class ProduitResolver implements Resolve<any>{
 
   }
   resolve(){
+    console.log('ok');
     return this.pdtService.getListProduits();
+    console.log('okkk');
   }
 }

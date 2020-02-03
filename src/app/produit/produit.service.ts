@@ -11,6 +11,7 @@ export class ProduitsService{
  }
 
  getListProduits(): Observable<any>{
+   console.log('ok');
    return this.http.get(API_URLS.PRODUITS_URL);
  }
 
@@ -19,6 +20,7 @@ export class ProduitsService{
  }
 
  onDelete(id:number) : Observable<any>{
+   console.log('test');
    return this.http.delete(API_URLS.PRODUITS_URL + id);
  }
 

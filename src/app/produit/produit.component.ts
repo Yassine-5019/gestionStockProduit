@@ -29,6 +29,7 @@ export class ProduitComponent implements OnInit{
   this.initialiserProduit();
   //this.loadProduits();
   this.produits=this.activatedRouter.snapshot.data.produits;
+  console.log('ok');
 }
 
   createForm(){
@@ -40,11 +41,13 @@ export class ProduitComponent implements OnInit{
   }
 
   loadProduits(){
+    console.log('ok');
     this.pdtService.getListProduits().subscribe(
       data=>{this.produits=data},
       error=>{console.log('An error was occured.')},
       ()=>{console.log('loading produits was done.')},
     )
+    console.log('okkk');
   }
   addProduit(){
     const p=this.produitForm.value;
@@ -66,6 +69,7 @@ export class ProduitComponent implements OnInit{
   }
 
   onDelete(){
+    console.log('ok');
     this.pdtService.onDelete(this.selectedProduit.id).subscribe(
       res=>{
         this.selectedProduit=new Produit();

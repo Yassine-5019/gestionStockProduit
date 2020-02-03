@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AppService } from '../app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,13 +11,26 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   loginForm:FormGroup;
-  constructor(private fb:FormBuilder) { }
+  credentials={
+    username:'',
+    password:''
+  };
+  constructor(private fb:FormBuilder,
+              private appService:AppService,
+              private router:Router) { }
 
   ngOnInit() {
       this.loginForm=this.fb.group({
-      username:['', Validators.required, Validators.minLength(3)],
-      password:['', Validators.required, Validators.minLength(3)]
+      username:['', [Validators.required, Validators.minLength(3)]],
+      password:['', [Validators.required, Validators.minLength(3)]]
     });
+  }
+
+  login(){
+    this.appService.authenticate(
+      this.credentials,()=>{
+        this.router.navigateByUrl('/home');
+      })
   }
 
 }
